@@ -1,17 +1,17 @@
-﻿
+﻿Console.WriteLine("Введите размер массива: ");
 int arraysize = int.Parse(Console.ReadLine()); 
 
 string[] array = new string[arraysize]; 
 
 for (int i = 0; i < arraysize; i++)
 {
-    Console.Write("Введите элементы массива: "); 
+    Console.Write("Введите элемент вашего массива: "); 
     string result = Console.ReadLine();
     array[i] = result; 
 }
 
 Console.WriteLine();
-Console.Write("Это ваш массив: [");
+Console.Write("Это введенный вами массив: [");
 Console.Write(string.Join(",", array));
 Console.Write("]");
 
@@ -28,8 +28,19 @@ for (int i = 0; i < array.Length; i++)
 
 Console.WriteLine();
 
-Console.Write("Итоговый массив равен: [");
+Console.Write("Это итоговый массив: [");
 
 string[] array2 = new string[count]; 
 
 int k = 0;
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i].Length <= maximumSimbol)
+    {
+        array2[k] = array[i];
+        Console.Write(array2[k] + ",");
+        k++;
+    }
+}
+Console.Write("]");
+

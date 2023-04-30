@@ -25,3 +25,11 @@ for (int i = 0; i < array.Length; i++)
         count++; 
     }
 }
+
+Console.WriteLine();
+
+Console.Write("Итоговый массив равен: [");
+
+string[] array2 = new string[count]; 
+
+int k = 0;
